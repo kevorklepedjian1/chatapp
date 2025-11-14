@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000
 const _dirname = path.resolve()
 dotenv.config()
 
+app.use(express.json())
 app.use("/api/auth",authRoutes)
 app.use('/api/messages', messageRoutes)
 
