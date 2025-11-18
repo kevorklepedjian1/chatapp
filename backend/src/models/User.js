@@ -13,10 +13,14 @@ const userSchema = mongoose.Schema({
      password:{
       type: String,
       required: true,
-      mixlenght:6
+      minlenght:6
     },
      profilePic:{
       type: String,
      defaut:'',
     }
 }, {timestemps: true})
+
+const User = mongoose.model("User", userSchema)
+
+export default User
